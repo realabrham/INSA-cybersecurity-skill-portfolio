@@ -3,7 +3,7 @@
 ## 📖 Background & Motivation
 Developed as part of the INSA Cybersecurity Summer Camp skill-based track. **LocalGuard** is a lightweight, modular endpoint security telemetry and anomaly detection engine written in Python. It is designed to bridge the gap between passive network reconnaissance and active process behavior monitoring by performing heuristic correlation on active sockets, routing tables, and running system daemons.
 
-Unlike simple port scanners, LocalGuard correlates open listening/established sockets with active OS process tables, flagging anomalous outbound connections and unverified background execution signatures.
+Unlike simple port scanners, LocalGuard correlates open established sockets with active OS process tables, flagging anomalous outbound connections and unverified background execution signatures.
 
 ## 🛠️ Architecture & Modules
 The engine is structured into a clean Model-Analysis-Reporting pipeline:

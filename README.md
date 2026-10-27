@@ -1,14 +1,19 @@
-# Advanced Network Reconnaissance & Port Scanning Toolkit
+# LocalGuard: Endpoint Threat Hunting & Anomaly Correlation Engine
 
-## 📌 Project Overview
-This repository contains a custom-built, multi-threaded network reconnaissance and port scanning utility developed during the INSA Cybersecurity Summer Camp. The tool is designed to identify active ports, perform banner grabbing for service enumeration, and assess network exposure surfaces efficiently.
+## 📖 Background & Motivation
+Developed as part of the INSA Cybersecurity Summer Camp skill-based track. **LocalGuard** is a lightweight, modular endpoint security telemetry and anomaly detection engine written in Python. It is designed to bridge the gap between passive network reconnaissance and active process behavior monitoring by performing heuristic correlation on active sockets, routing tables, and running system daemons.
 
-## 🚀 Key Features
-- **Multi-threading:** Utilizes Python threading to scan 1000+ ports in seconds.
-- **Banner Grabbing:** Automatically detects running services and application versions behind open ports.
-- **Socket-Level Analysis:** Low-level TCP connection handling for precise port state detection.
+Unlike simple port scanners, LocalGuard correlates open listening/established sockets with active OS process tables, flagging anomalous outbound connections and unverified background execution signatures.
 
-## ⚙️ Usage Instructions
+## 🛠️ Architecture & Modules
+The engine is structured into a clean Model-Analysis-Reporting pipeline:
+1. **`main.py`**: CLI orchestrator, managing the audit lifecycle and logging threads.
+2. **`scanner.py`**: Low-level telemetry collector utilizing cross-platform OS interfaces to query active sockets (`psutil`-backed) and process metadata.
+3. **`analyzer.py`**: Heuristic anomaly scoring engine that checks endpoints against known adversary port distributions and signature keywords.
+4. **`reporter.py`**: Structured JSON security ledger generator for downstream SIEM ingestion.
+
+## ⚙️ Installation & Usage
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/network-recon-toolkit.git](https://github.com/your-username/network-recon-toolkit.git)
+   git clone [https://github.com/your-username/LocalGuard-ThreatHunter.git](https://github.com/your-username/LocalGuard-ThreatHunter.git)
+   cd LocalGuard-ThreatHunter

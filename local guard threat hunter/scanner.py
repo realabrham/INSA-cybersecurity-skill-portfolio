@@ -3,7 +3,6 @@ import socket
 
 class SystemReconScanner:
     def __init__(self):
-        # Note to self: Need to expand this to handle Windows vs Linux socket families later
         self.timeout = 1.0
 
     def get_active_connections(self):
@@ -29,7 +28,6 @@ class SystemReconScanner:
         for proc in psutil.process_iter(['pid', 'name', 'username', 'cpu_percent']):
             try:
                 pinfo = proc.info
-                # Basic heuristic check for memory or strange names
                 process_ledger.append({
                     "pid": pinfo['pid'],
                     "name": pinfo['name'],

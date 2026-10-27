@@ -1,4 +1,0 @@
-[*] Target: Localhost (127.0.0.1)
-[*] Tool Used: Custom Python Socket Scanner & Nmap Simulation
-[*] Status: Completed successfully. Identified open ports (e.g., Port 21, 80, 443 simulation).
-[*] Security Recommendation: Close unused ports to minimize attack surface.

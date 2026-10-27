@@ -13,18 +13,12 @@ The engine is structured into a clean Model-Analysis-Reporting pipeline:
 4. **`reporter.py`**: Structured JSON security ledger generator for downstream SIEM ingestion.
 
 ## ⚙️ Installation & Usage
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/your-username/LocalGuard-ThreatHunter.git](https://github.com/your-username/LocalGuard-ThreatHunter.git)
-   cd LocalGuard-ThreatHunter
-   ```
-
-2. Install dependencies (psutil required):
+1. Install dependencies (psutil required):
    ```bash
    pip install psutil
    ```
 
-3. Execute the audit engine:
+2. Execute the audit engine:
    ```bash
    python main.py
    ```

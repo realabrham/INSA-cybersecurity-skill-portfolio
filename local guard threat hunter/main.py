@@ -15,7 +15,6 @@ def main():
     print("[*] Initializing LocalGuard security daemon...")
     time.sleep(0.5)
     
-    # Initialize components
     scanner = SystemReconScanner()
     analyzer = ThreatAnalyzer()
     reporter = SecurityReporter()

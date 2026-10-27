@@ -1,13 +1,11 @@
 class ThreatAnalyzer:
     def __init__(self):
-        # Known suspicious ports or signatures for heuristic scoring
         self.suspicious_ports = [4444, 1337, 31337, 6667, 8080]
         self.known_risky_keywords = ["nc", "netcat", "mimikatz", "meterpreter", "reverse_shell"]
 
     def evaluate_risk(self, connections, processes):
         threats_detected = []
 
-        # Analyze network connections for foreign or suspicious ports
         for conn in connections:
             remote = conn.get("remote_address")
             if remote != "None" and remote != "N/A":
@@ -23,7 +21,6 @@ class ThreatAnalyzer:
                 except ValueError:
                     continue
 
-        # Analyze processes for suspicious keywords
         for proc in processes:
             name = str(proc.get("name", "")).lower()
             for keyword in self.known_risky_keywords:

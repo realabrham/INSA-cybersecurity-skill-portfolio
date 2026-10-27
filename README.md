@@ -1,15 +1,14 @@
-# Network Reconnaissance & Port Scanner Project
+# Advanced Network Reconnaissance & Port Scanning Toolkit
 
-## Overview
-This project demonstrates foundational network security and reconnaissance skills using Python and socket programming to scan open ports and assess local network exposure.
+## 📌 Project Overview
+This repository contains a custom-built, multi-threaded network reconnaissance and port scanning utility developed during the INSA Cybersecurity Summer Camp. The tool is designed to identify active ports, perform banner grabbing for service enumeration, and assess network exposure surfaces efficiently.
 
-## Features
-- TCP socket connection testing.
-- Automated port range scanning (Ports 20 to 100).
-- Basic vulnerability surface assessment.
+## 🚀 Key Features
+- **Multi-threading:** Utilizes Python threading to scan 1000+ ports in seconds.
+- **Banner Grabbing:** Automatically detects running services and application versions behind open ports.
+- **Socket-Level Analysis:** Low-level TCP connection handling for precise port state detection.
 
-## How to Run
-1. Ensure Python is installed.
-2. Run the script:
+## ⚙️ Usage Instructions
+1. Clone the repository:
    ```bash
-   python port_scanner.py
+   git clone [https://github.com/your-username/network-recon-toolkit.git](https://github.com/your-username/network-recon-toolkit.git)

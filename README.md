@@ -15,11 +15,11 @@ The engine is structured into a clean Model-Analysis-Reporting pipeline:
 ## ⚙️ Installation & Usage
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/LocalGuard-ThreatHunter.git
+   git clone [https://github.com/your-username/LocalGuard-ThreatHunter.git](https://github.com/your-username/LocalGuard-ThreatHunter.git)
    cd LocalGuard-ThreatHunter
    ```
 
-2. Clone the repository:
+2. Install dependencies (psutil required):
    ```bash
    pip install psutil
    ```

@@ -15,5 +15,32 @@ The engine is structured into a clean Model-Analysis-Reporting pipeline:
 ## ⚙️ Installation & Usage
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/LocalGuard-ThreatHunter.git](https://github.com/your-username/LocalGuard-ThreatHunter.git)
+   git clone https://github.com/your-username/LocalGuard-ThreatHunter.git
    cd LocalGuard-ThreatHunter
+   ```
+
+2. Clone the repository:
+   ```bash
+   pip install psutil
+   ```
+
+3. Execute the audit engine:
+   ```bash
+   python main.py
+   ```
+
+## 🔍 Sample Output Ledger
+```json
+{
+    "tool_name": "LocalGuard-EDR Core",
+    "version": "1.4.2-beta",
+    "total_findings": 1,
+    "findings": [
+        {
+            "type": "Baseline Integrity",
+            "severity": "INFO",
+            "details": "No active anomalies or known signatures triggered during runtime."
+        }
+    ]
+}
+```
